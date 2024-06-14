@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mensajes</title>
+    <style>
+        .nombre { font-weight: bold; }
+        .carrera { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Mensajes</h1>
+    <ul>
+        {% for mensaje in mensajes %}
+            <li>
+                <span class="nombre">{{ mensaje.persona.nombre }} {{ mensaje.persona.ap_pat }} {{ mensaje.persona.ap_mat }}</span>: {{ mensaje.txt_mensaje }} 
+                (<span class="carrera">{{ mensaje.persona.carrera.nombre }}</span>)
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
