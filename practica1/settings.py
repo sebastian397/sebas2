@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t^)1k*333%r)o2up*rtb!m10)+e6j00k-#t&4loj!lx^6r&v@c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sebas3.azurewebsites.net','http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['sebas3.azurewebsites.net','127.0.0.1','localhost']
 
 
 CSRF_TRUSTED_ORIGINS = ['https://sebas3.azurewebsites.net/']
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+  
 ]
 
 ROOT_URLCONF = 'practica1.urls'
@@ -85,6 +85,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# CSRF settings
+CSRF_TRUSTED_ORIGINS = ['https://sebas3.azurewebsites.net/']
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Password validation
@@ -104,6 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Security settings for production
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 
 # Internationalization
