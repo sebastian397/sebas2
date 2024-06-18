@@ -25,10 +25,10 @@ SECRET_KEY = 'django-insecure-t^)1k*333%r)o2up*rtb!m10)+e6j00k-#t&4loj!lx^6r&v@c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sebas2.azurewebsites.net','http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['sebas3.azurewebsites.net','http://127.0.0.1:8000/']
 
 
-CSRF_TRUSTED_ORIGINS = ['https://sebas2.azurewebsites.net/']
+CSRF_TRUSTED_ORIGINS = ['https://sebas3.azurewebsites.net/']
 
 
 
